@@ -41,6 +41,15 @@ StreamSidekick AI turns local open-source vision-language models into a real-tim
 
 - **Local Inference Latency:** < 500ms average response time on local vLLM.
 - **Resilience:** Gracefully falls back to cloud API upon local engine shutdown or connection timeout.
+
+---
+
+## 👤 Author & Acknowledgments
+
+* **Author:** Uttara Sawant  
+* **GitHub:** [@uttarasawantgh](https://github.com/uttarasawantgh)
+* **Gemini:** Utilized as an AI collaborator for architectural troubleshooting, debugging complex structural normalization logic, and optimizing code documentation.
+
 ---
 
 ## ⚙️ Quickstart & Setup
@@ -52,10 +61,3 @@ export TWITCH_CHANNEL="your_channel_name"
 export BOT_PREFIX="!"
 export OPENAI_BASE_URL="http://localhost:8001/v1"
 export OPENAI_API_KEY="your_openai_key"  # Used for cloud fallback
----
-
-## 👤 Author & Acknowledgments
-
-* **Author:** Uttara Sawant  
-* **GitHub:** [@uttarasawantgh](https://github.com/uttarasawantgh)
-* **Gemini:** Utilized as an AI collaborator for architectural troubleshooting, debugging complex structural normalization logic, and optimizing code documentation.
