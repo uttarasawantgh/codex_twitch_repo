@@ -1,0 +1,15 @@
+# Environment variables and secrets
+.env
+
+# Twitch / application tokens
+.tio.tokens.json
+
+# Python virtual environment
+venv/
+
+# Compiled Python bytecode and cache
+__pycache__/
+*.pyc
+
+# Local backup files
+main.py.orig
