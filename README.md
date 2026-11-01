@@ -4,16 +4,24 @@
 StreamSidekick AI turns local open-source vision-language models into a real-time, interactive stream co-host. Built for Twitch streamers and hackathon performance, it monitors chat commands, dynamically suggests stream activities, and responds instantly without blocking the streamer's live workflow.
 
 ## 🔑 Key Features
-- **Dual-Endpoint Architecture:** Primary inference runs locally on NVIDIA DGX Hardware (Qwen2.5-VL-7B-Instruct @ localhost:8001), with instant zero-downtime failover to OpenAI (gpt-4o-mini).
+- **Dual-Endpoint Architecture:** Primary inference runs locally on NVIDIA DGX Hardware (Qwen2.5-VL-7B-Instruct @ localhost:8001), with instant zero-downtime failover to OpenAI (gpt-5.6-sol).
 - **Non-Blocking Execution:** Uses asyncio.to_thread around synchronous model completions, keeping the TwitchIO WebSocket event loop responsive under rapid stress tests.
 - **Twitch-Optimized Output:** Strips Markdown and metadata, outputting clean, unformatted plain text tailored for standard Twitch chat limits.
 
 ## 🛠️ Tech Stack & Architecture
 - **Primary Engine:** Local vLLM Container (Qwen/Qwen2.5-VL-7B-Instruct)
-- **Cloud Fallback:** OpenAI API (gpt-4o-mini)
+- **Cloud Fallback:** OpenAI API (gpt-5.6-sol)
 - **Chat Pipeline:** Python 3.11+, twitchio 2.10.0
 - **Concurrency:** Python asyncio + asyncio.to_thread
 - **Dev Environment:** OpenAI Codex CLI
+
+## 🤖 AI-Assisted Development Workflow
+
+This project was built and iterated using **OpenAI Codex CLI** as an autonomous developer agent:
+
+- **Architectural Generation:** Prompted Codex to implement dual-endpoint resilience, combining local `vLLM` inference with an automatic fallback to OpenAI `gpt-5.6-sol`.
+- **Async & Concurrency Optimization:** Used Codex to refactor synchronous LLM API calls with `asyncio.to_thread`, preventing model latency from blocking the Twitch WebSocket event loop.
+- **Automated Refactoring & Hardening:** Prompted Codex to enforce strict 3-second connection timeouts, plain-text response sanitization (<350 chars), and proactive fallback handling for empty triggers.
 
 ---
 
