@@ -45,7 +45,6 @@ StreamSidekick AI turns local open-source vision-language models into a real-tim
 
 ## ⚙️ Quickstart & Setup
 
-### 1. Environment Configuration
 Create a `.env` file or export your environment variables:
 ```bash
 export TMI_TOKEN="oauth:your_twitch_oauth_token"
@@ -53,8 +52,6 @@ export TWITCH_CHANNEL="your_channel_name"
 export BOT_PREFIX="!"
 export OPENAI_BASE_URL="http://localhost:8001/v1"
 export OPENAI_API_KEY="your_openai_key"  # Used for cloud fallback
-
-
 ---
 
 ## 👤 Author & Acknowledgments
