@@ -39,6 +39,8 @@ StreamSidekick AI turns local open-source vision-language models into a real-tim
    - **Trigger:** Local vLLM Docker container stopped or network timeout.
    - **Behavior:** Strict 3-second connection timeout catches the connection exception and fails over seamlessly to `gpt-4o-mini`, notifying chat: `@user Sidekick is currently operating on backup mode!`.
 
+- **Local Inference Latency:** < 500ms average response time on local vLLM.
+- **Resilience:** Gracefully falls back to cloud API upon local engine shutdown or connection timeout.
 ---
 
 ## ⚙️ Quickstart & Setup
@@ -52,8 +54,11 @@ export BOT_PREFIX="!"
 export OPENAI_BASE_URL="http://localhost:8001/v1"
 export OPENAI_API_KEY="your_openai_key"  # Used for cloud fallback
 
+
 ---
 
-## 🧪 Verified Test Results
-- **Local Inference Latency:** < 500ms average response time on local vLLM.
-- **Resilience:** Gracefully falls back to cloud API upon local engine shutdown or connection timeout.
+## 👤 Author & Acknowledgments
+
+* **Author:** Uttara Sawant  
+* **GitHub:** [@uttarasawantgh](https://github.com/uttarasawantgh)
+* **Gemini:** Utilized as an AI collaborator for architectural troubleshooting, debugging complex structural normalization logic, and optimizing code documentation.
