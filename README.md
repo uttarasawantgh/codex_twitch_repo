@@ -14,6 +14,7 @@ StreamSidekick AI turns local open-source vision-language models into a real-tim
 - **Chat Pipeline:** Python 3.11+, twitchio 2.10.0
 - **Concurrency:** Python asyncio + asyncio.to_thread
 - **Dev Environment:** OpenAI Codex CLI
+- **🎬 Video Demonstration:** [Watch the Technical Walkthrough](https://youtu.be/nytTTx5xTJ8)
 
 ## 🤖 AI-Assisted Development Workflow
 
